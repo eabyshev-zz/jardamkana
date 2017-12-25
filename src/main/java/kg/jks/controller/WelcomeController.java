@@ -13,7 +13,7 @@ public class WelcomeController {
 
     @RequestMapping("/list")
     public String elderlyList() {
-        return "ElderlyList";
+        return "elderlyList";
     }
 
     @RequestMapping("/about")
