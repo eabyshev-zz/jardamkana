@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jardamkana</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+
+      <!-- Custom styles for this template -->
+      <link rel="stylesheet" th:href="@{/css/justified-nav.css}"/>
+
+    <!-- 2Gis api -->
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <script type="text/javascript">
+        var map; 
+
+        DG.then(function () {
+            map = DG.map('map', {
+                center: [42.882004, 74.602748],
+                zoom: 12,
+                maxBounds: [
+                    [42.799935134773136, 74.45503234863283],
+                    [42.94838139765316, 74.71939086914064]
+                ],
+                minZoom: 11,
+                maxZoom: 20,
+                scrollWheelZoom: false
+            });
+            
+            // DG.marker([42.882004, 74.602748]).addTo(map).bindPopup('<h3>test my</p>');
+        });
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <header class="masthead">
+        <h3 class="text-muted">Jardamkana</h3>
+
+        <nav class="navbar navbar-expand-md navbar-light bg-light rounded mb-3">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav text-md-center nav-justified w-100">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Список</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Отчеты</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">О проекте</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+        <br>
+        <div style="text-align: center">
+          <h1>Делай добро и бросай его в воду</h1>
+          <p class="lead">Поможем людям которые нуждаются в нашей поддержке, этим самым поможем себе</p>
+        </div>
+        <br>
+        <div class="container">
+            <div id="map" style="width:100%; height:600px; margin: auto"></div>
+        </div>
+
+
+      <!-- Site footer -->
+      <footer class="footer">
+        <p>&copy; Win-win solutions 2017</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script th:src="@{/js/popper.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/jquery-3.2.1.min.js}"></script>
+  </body>
+</html>
