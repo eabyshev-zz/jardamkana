@@ -6,36 +6,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Jardamkana</title>
+    <title>О проекте</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" th:href="@{/css/justified-nav.css}"/>
-
-    <!-- 2Gis api -->
-    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
-    <script type="text/javascript">
-        var map;
-        DG.then(function () {
-            map = DG.map('map', {
-                center: [42.882004, 74.602748],
-                zoom: 12,
-                maxBounds: [
-                    [42.799935134773136, 74.45503234863283],
-                    [42.94838139765316, 74.71939086914064]
-                ],
-                minZoom: 12,
-                maxZoom: 20,
-                scrollWheelZoom: false,
-                fullscreenControl: false
-            });
-
-            // DG.marker([42.882004, 74.602748]).addTo(map).bindPopup('<h3>test my</p>');
-        });
-    </script>
-
 </head>
 
 <body>
@@ -52,8 +29,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav text-md-center nav-justified w-100">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Главная <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Главная</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="list">Список</a>
@@ -61,8 +38,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="reports">Отчеты</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about">О проекте</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="about">О проекте <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
@@ -70,15 +47,9 @@
     </header>
 
     <br>
-    <div style="text-align: center">
-        <h1>Делай добро и бросай его в воду</h1>
-        <p class="lead">Поможем людям которые нуждаются в нашей поддержке, этим самым поможем себе</p>
+    <div>
+        <h1>О проекте</h1>
     </div>
-    <br>
-    <div class="container">
-        <div id="map" style="width:100%; height:600px; margin: auto"></div>
-    </div>
-
 
     <!-- Site footer -->
     <footer class="footer">

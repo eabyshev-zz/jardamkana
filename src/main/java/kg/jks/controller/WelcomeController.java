@@ -10,4 +10,19 @@ public class WelcomeController {
     public String welcome() {
         return "index";
     }
+
+    @RequestMapping("/list")
+    public String elderlyList() {
+        return "ElderlyList";
+    }
+
+    @RequestMapping("/about")
+    public String about() {
+        return "about";
+    }
+
+    @RequestMapping("/reports")
+    public String reports() {
+        return "reports";
+    }
 }
